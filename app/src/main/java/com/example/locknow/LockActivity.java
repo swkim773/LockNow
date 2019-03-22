@@ -1,21 +1,22 @@
 package com.example.locknow;
 
+import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
-public class LockActivity extends AppCompatActivity {
+public class LockActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lock();
-        new Handler().postDelayed(() -> { finish(); }, 100);
+        new Handler().postDelayed(() -> {
+            finish();
+        }, 100);
     }
 
     private void lock() {

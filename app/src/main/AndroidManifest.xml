@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.locknow" android:versionCode="1" android:versionName="1">
+    package="com.example.locknow"
+    android:versionCode="1"
+    android:versionName="1">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.USES_POLICY_FORCE_LOCK" />
 
     <application
         android:allowBackup="true"
-        android:label="Lock"
         android:icon="@mipmap/ic_launcher"
+        android:label="Lock"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@android:style/Theme.Translucent.NoTitleBar">
         <activity android:name="com.example.locknow.LockActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +20,8 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.example.locknow.AdminReceiver"
+        <receiver
+            android:name="com.example.locknow.AdminReceiver"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
